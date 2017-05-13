@@ -1,3 +1,10 @@
+note
+====
+This fork contains fixes for these issue:
+
+* https://github.com/nodejitsu/node-http-proxy/issues/1107
+* https://github.com/chimurai/http-proxy-middleware/issues/138
+
 <p align="center">
   <img src="https://raw.github.com/nodejitsu/node-http-proxy/master/doc/logo.png"/>
 </p>
@@ -336,7 +343,7 @@ proxyServer.listen(8015);
 *  **preserveHeaderKeyCase**: true/false, Default: false - specify whether you want to keep letter case of response header key
 *  **auth**: Basic authentication i.e. 'user:password' to compute an Authorization header.
 *  **hostRewrite**: rewrites the location hostname on (201/301/302/307/308) redirects.
-*  **autoRewrite**: rewrites the location host/port on (201/301/302/307/308) redirects based on requested host/port. Default: false.
+*  **autoRewrite**: rewrites the location host/port on (201/301/302/307/308) redirects based on requested host/port. If autoRewrite is a string, the path will be appended to the host url. Default: false.
 *  **protocolRewrite**: rewrites the location protocol on (201/301/302/307/308) redirects to 'http' or 'https'. Default: null.
 *  **cookieDomainRewrite**: rewrites domain of `set-cookie` headers. Possible values:
    * `false` (default): disable cookie rewriting
